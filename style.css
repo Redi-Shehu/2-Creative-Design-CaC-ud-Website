@@ -27,6 +27,8 @@
   --team-heading-color: #796717;
   --team-projects-bg-color: #fab34a;
   --team-story-bg-color: #fd4545e6;
+  --form-bg-color: #e5e9ff;
+  --form-btn-hover-bg-color: #22c9df;
 }
 html {
   font-size: 62.5%;
@@ -151,7 +153,7 @@ img {
   text-shadow: 0.1rem 0.1rem 0.2rem #ddd, -0.1rem -0.1rem 0.2rem #ddd;
 }
 
-/* -----------Section 2-------------- */
+/* -----------Section 2 Customers-------------- */
 .section__2 {
   width: 100%;
   height: 100vh;
@@ -223,7 +225,7 @@ img {
   font-weight: 700;
 }
 
-/* -----------Section 3-------------- */
+/* -----------Section 3 Team-------------- */
 .section__3 {
   width: 100%;
   height: 100vh;
@@ -316,17 +318,18 @@ img {
   height: 100%;
   background-color: var(--team-story-bg-color);
   padding: 2rem;
-  border-radius: 1rem;
   display: flex;
+  border-radius: 20rem 0 20rem 20rem;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   transform: scale(0);
   transform-origin: top right;
-  transition: all 0.5s;
+  transition: all 1s;
 }
 .show.story {
   transform: scale(1);
+  border-radius: 0;
 }
 .story__title {
   font-size: 4rem;
@@ -338,4 +341,83 @@ img {
   font-size: 1.8rem;
   color: #eee;
   text-align: justify;
+}
+/* -----------Section 4 Contact and Footer----------- */
+.section__4 {
+  width: 100%;
+  height: 130vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.form__container {
+  width: 80%;
+  height: 40%;
+  background-color: var(--form-bg-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  box-shadow: 0.3rem 0.3rem 0.5rem #ccc, -0.1rem -0.1rem 0.5rem #ccc;
+  border-radius: 0.5rem;
+  perspective: 100rem;
+}
+.form__container img {
+  width: 45rem;
+  background-color: var(--color-1);
+  padding: 5rem;
+  opacity: 0.8;
+  box-shadow: -3rem 3rem 4rem #ccc;
+  transform: rotateY(20deg);
+}
+.form__container img:hover {
+  transition: transform 1s;
+  transform: translateY(-2rem) rotateY(20deg);
+}
+.form__container--contact-form {
+  width: 45rem;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  padding: 3rem;
+  border-radius: 0.5rem;
+  box-shadow: 3rem 3rem 4rem #888;
+  transform: rotateY(-30deg);
+}
+.form__container--contact-form:hover {
+  transition: transform 1s;
+  transform: translateY(-2rem) rotateY(-30deg);
+}
+.form__container--contact-form input,
+.form__container--contact-form textarea {
+  margin: 1rem;
+  padding: 1rem;
+  font-size: 1.3rem;
+  letter-spacing: 0.1rem;
+  border: 1px solid #ddd;
+  border-radius: 2rem;
+  box-shadow: inset 0.1rem 0.1rem 0.2rem #ddd, inset -0.1rem -0.1rem 0.2rem #ddd;
+}
+.form__container--contact-form textarea {
+  max-height: 15rem;
+  min-height: 10rem;
+  max-width: 100%;
+  min-width: 70%;
+}
+.form__container--contact-form input[type="submit"] {
+  color: #fff;
+  background-color: var(--color-1);
+  font-size: 1.8rem;
+  font-weight: bold;
+  letter-spacing: 0.5rem;
+  transition: background-color 0.5s;
+}
+.form__container--contact-form input[type="submit"]:hover {
+  background-color: var(--form-btn-hover-bg-color);
+}
+.copyright {
+  font-size: 2rem;
+  letter-spacing: 0.2rem;
+  color: #444;
 }
