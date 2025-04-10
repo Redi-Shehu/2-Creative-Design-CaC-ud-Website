@@ -533,10 +533,10 @@ img {
     height: 140vh;
   }
   .floating-bg {
-    top: -30rem;
+    top: -35rem;
   }
   .section__1--heading {
-    top: 25vw;
+    top: 15vw;
   }
 }
 @media (max-width: 750px) {
