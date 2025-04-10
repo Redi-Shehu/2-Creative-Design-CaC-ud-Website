@@ -447,6 +447,7 @@ img {
 }
 
 /* Responsive media queries */
+
 @media (max-width: 1400px) {
   /* section 1 */
   .floating-bg {
@@ -525,6 +526,11 @@ img {
   }
   .form__container {
     height: 50%;
+  }
+}
+@media (max-width: 950px) and (orientation: landscape) {
+  .section__1 {
+    height: 140vh;
   }
 }
 @media (max-width: 750px) {
