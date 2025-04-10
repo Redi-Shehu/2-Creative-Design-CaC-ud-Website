@@ -15,12 +15,12 @@
   <body>
     <div class="container">
       <!-- section 1 -->
-      <section class="section__1">
+      <section class="section__1" id="home">
         <nav class="navbar">
-          <a href="#" class="navbar__link">Design</a>
-          <a href="#" class="navbar__link">Customers</a>
-          <a href="#" class="navbar__link">Team</a>
-          <a href="#" class="navbar__link">Contact</a>
+          <a href="#home" class="navbar__link">Design</a>
+          <a href="#customers" class="navbar__link">Customers</a>
+          <a href="#team" class="navbar__link">Team</a>
+          <a href="#contact" class="navbar__link">Contact</a>
         </nav>
         <div class="floating-bg"></div>
         <h1 class="section__1--heading">Creative Design</h1>
@@ -29,7 +29,7 @@
         </div>
       </section>
       <!-- section 2 customers-->
-      <section class="section__2">
+      <section class="section__2" id="customers">
         <h1 class="section__heading">Customers</h1>
         <div class="customers">
           <!-- customer -->
@@ -92,7 +92,7 @@
         </div>
       </section>
       <!-- section 3 team-->
-      <section class="section__3">
+      <section class="section__3" id="team">
         <h1 class="section__heading">Team</h1>
         <div class="team">
           <!-- member -->
@@ -185,7 +185,7 @@
         </div>
       </section>
       <!-- section 4 contact and footer-->
-      <section class="section__4">
+      <section class="section__4" id="contact">
         <h1 class="section__heading">Contact</h1>
         <div class="form__container">
           <img src="./images/form-img.png" alt="" />
@@ -198,6 +198,10 @@
         </div>
         <p class="copyright">Copyright &copy; CaC All Rights Reserved</p>
       </section>
+      <!-- point to home---top of the page button -->
+      <button class="scroll-up-btn">
+        <a href="#home"><i class="fas fa-arrow-up"></i></a>
+      </button>
     </div>
     <script src="./script.js"></script>
   </body>

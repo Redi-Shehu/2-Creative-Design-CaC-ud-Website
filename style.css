@@ -29,9 +29,11 @@
   --team-story-bg-color: #fd4545e6;
   --form-bg-color: #e5e9ff;
   --form-btn-hover-bg-color: #22c9df;
+  --scroll-top-btn-hover-bg-color: #32e7ff;
 }
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 body {
   font-family: var(--font-secondary);
@@ -41,7 +43,8 @@ ul {
   list-style: none;
 }
 a,
-input[type="submit"] {
+input[type="submit"],
+button {
   cursor: pointer;
   text-decoration: none;
 }
@@ -148,7 +151,7 @@ img {
   transform: translateX(-50%);
 }
 .logo i {
-  font-size: 8rem;
+  font-size: 12rem;
   color: var(--color-1);
   text-shadow: 0.1rem 0.1rem 0.2rem #ddd, -0.1rem -0.1rem 0.2rem #ddd;
 }
@@ -420,4 +423,161 @@ img {
   font-size: 2rem;
   letter-spacing: 0.2rem;
   color: #444;
+}
+/*point to home---top of the page button */
+.scroll-up-btn {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  background-color: var(--color-1);
+  position: fixed;
+  bottom: 3rem;
+  right: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.5s;
+}
+.scroll-up-btn a i {
+  color: #fff;
+  font-size: 2rem;
+}
+.scroll-up-btn:hover {
+  background-color: var(--scroll-top-btn-hover-bg-color);
+}
+
+/* Responsive media queries */
+@media (max-width: 1400px) {
+  /* section 1 */
+  .floating-bg {
+    top: -50rem;
+  }
+  .section__1--heading {
+    font-size: 6rem;
+    top: 25vw;
+    width: 70rem;
+  }
+  .navbar__link {
+    font-size: 2rem;
+  }
+  .logo {
+    top: 75%;
+  }
+  .logo i {
+    font-size: 10rem;
+  }
+  /* section 2 Customers - section 3 Team */
+  .section__2,
+  .section__3 {
+    height: auto;
+  }
+  .section__heading {
+    font-size: 8rem;
+    margin-bottom: 5rem;
+  }
+  .customers,
+  .team {
+    flex-wrap: wrap;
+  }
+  .customer,
+  .team__member {
+    margin: 5rem 10rem;
+  }
+  /* section 4 Contact */
+  .form__container {
+    height: 60%;
+  }
+  .form__container img {
+    display: none;
+  }
+  .form__container--contact-form {
+    width: 45rem;
+    transform: rotate(0);
+  }
+  .form__container--contact-form:hover {
+    transform: translate(0);
+  }
+}
+
+@media (max-width: 1150px) {
+  .floating-bg {
+    top: -35rem;
+  }
+  .section__1--heading {
+    font-size: 5rem;
+    top: 30vw;
+    width: 60rem;
+  }
+  .logo i {
+    font-size: 9rem;
+  }
+}
+
+@media (max-width: 950px) {
+  .floating-bg {
+    top: -20rem;
+  }
+  .section__1--heading {
+    top: 40vw;
+  }
+  .navbar {
+    justify-content: space-around;
+  }
+  .form__container {
+    height: 50%;
+  }
+}
+@media (max-width: 750px) {
+  html {
+    font-size: 50%;
+  }
+  .floating-bg {
+    top: 0rem;
+  }
+  .section__1--heading {
+    top: 48vw;
+  }
+  .form__container {
+    height: 40%;
+  }
+}
+@media (max-width: 550px) {
+  .floating-bg {
+    top: 20rem;
+  }
+  .section__1--heading {
+    top: 65vw;
+    width: 40rem;
+    font-size: 3.5rem;
+  }
+  .section__heading {
+    font-size: 6rem;
+  }
+  .customer,
+  .team__member {
+    margin: 5rem 0;
+  }
+  .section__4 {
+    height: auto;
+  }
+  .form__container {
+    background-color: transparent;
+    box-shadow: none;
+  }
+  .form__container--contact-form {
+    box-shadow: 1rem 1rem 2rem #888;
+  }
+  .form__container--contact-form:hover {
+    transition: box-shadow 0.5s;
+    box-shadow: 2rem 2rem 3rem #888;
+  }
+  .copyright {
+    font-size: 1.8rem;
+    margin: 5rem;
+    text-align: center;
+  }
+  .scroll-up-btn {
+    bottom: 2rem;
+    right: 2rem;
+  }
 }
